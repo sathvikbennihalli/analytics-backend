@@ -1,0 +1,116 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles for both pages */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Container styles for both pages */
+.container {
+  text-align: center;
+}
+
+.content-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General heading styles for both pages */
+.content-box h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Additional heading styles for 404 page */
+.content-box .error-heading {
+  font-size: 2.5rem;
+}
+
+.content-box p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Background color for the main page */
+body.index-page {
+  background-color: #d3d3d3;
+}
+
+/* Background color for the 404 page */
+body.error-page {
+  background-color: #d3d3d3;
+}
+
+/* Smile Face Styles */
+.smile,
+.sad-face {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.eyes {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.eye {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 50px;
+  height: 20px;
+  border-bottom: 3px solid black;
+  border-radius: 0 0 25px 25px;
+}
+
+/* Mouth styles for sad face */
+.sad-face .mouth {
+  border-top: 3px solid black;
+  border-bottom: none;
+  border-radius: 0 0 25px 25px;
+  transform: rotate(180deg);
+}
+
+/* Home link styles for 404 page */
+.home-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #333333;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #666666;
+}
