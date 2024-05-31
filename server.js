@@ -5,6 +5,7 @@ import cors from "cors";
 import { fileURLToPath } from "url";
 import multer from "multer";
 import { createPool } from "mysql2/promise";
+import rootRouter from "./routes/api/root.js";
 
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
@@ -36,6 +37,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use("/", express.static(join(__dirname, "public")));
+app.use("/", rootRouter);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
